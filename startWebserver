@@ -1,0 +1,5 @@
+#!/bin/bash
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+xdg-open http://localhost:9080 &&
+docker-compose -f $SCRIPTPATH/docker-compose.yml up php web 
