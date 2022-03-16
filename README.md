@@ -29,7 +29,7 @@ Passe como argumento a palabra para ser testada.
 ./runExercise3 PalavraParaTeste
 ```
 
-### Executando Exercício 2
+### Executando Testes
 
 ```
 ./runTests
