@@ -13,7 +13,7 @@ class Calculate {
         return ($num % $multipleNum) == 0 ? true : false;
     }
 
-    public static function sum(array $numbers): int
+    public static function sum(array $numbers): int|float
     {
         $sum = 0;
 
