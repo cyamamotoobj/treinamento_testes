@@ -4,6 +4,7 @@ namespace App\Exercises\Exercise3;
 
 use App\Math\Calculate;
 use App\Exercises\Exercise2\HappyNumbersExercise;
+use App\Exercises\Exercise1\Multiples;
 
 class WordsInNumbersExercise
 {
@@ -24,15 +25,13 @@ class WordsInNumbersExercise
         return $exercise->isHappyNumber($wordValue);
     }
 
-    public function isMultiple3Or5WordValue(string $word) 
+    public function isMultipleWordValue(array $multiples, string $word) 
     {
         $wordValue = $this->sumWordLetters($word);
 
-        if (Calculate::isMultiple($wordValue, 3) || Calculate::isMultiple($wordValue, 5)) {
-            return true;
-        }
+        $multiplesExercise = new Multiples();
 
-        return false;
+        return $multiplesExercise->isMultipleByOperator($wordValue, [3,5], 'or');
     }
 
     public function isPrimeWordValue(string $word)

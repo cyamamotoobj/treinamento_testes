@@ -31,15 +31,15 @@ class Exercise3WordsInNumbersTest extends TestCase
     }
 
     /**
-     * @covers WordsInNumbersExercise::isMultiple3Or5WordValue
+     * @covers WordsInNumbersExercise::isMultipleWordValue
      */
     public function testIsMultipleOf3Or5WordValue()
     {
         $exercise = new WordsInNumbersExercise();
 
-        self::assertTrue($exercise->isMultiple3Or5WordValue('ab'));
-        self::assertTrue($exercise->isMultiple3Or5WordValue('bc'));
-        self::assertFalse($exercise->isMultiple3Or5WordValue('ac'));
+        self::assertTrue($exercise->isMultipleWordValue([3,5], 'ab'));
+        self::assertTrue($exercise->isMultipleWordValue([3,5], 'bc'));
+        self::assertFalse($exercise->isMultipleWordValue([3,5], 'ac'));
     }
 
     /**

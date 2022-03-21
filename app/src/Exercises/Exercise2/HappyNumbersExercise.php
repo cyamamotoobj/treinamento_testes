@@ -48,10 +48,6 @@ class HappyNumbersExercise
 
     public function isFinalNumber(int $number) 
     {
-        if ($number == 1) {
-            return true;
-        }
-
-        return false;
+        return $number == 1;
     }
 }
